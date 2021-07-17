@@ -1,0 +1,15 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "TODO Backend App - Web server with Node/Express. Data (Todos) stored in a JSON file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alex Marin Mendez <@alexmarinmendez>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

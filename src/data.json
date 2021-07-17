@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Aprender Vanilla JS",
+        "place": "Online",
+        "status": "Done"
+    },
+    {
+        "id": 2,
+        "title": "Lavar la ropa",
+        "place": "Home",
+        "status": "Todo"
+    },
+    {
+        "id": 3,
+        "title": "Aprender React.js",
+        "place": "Online",
+        "status": "Done"
+    },
+    {
+        "id": 4,
+        "title": "Aprender Node.js",
+        "place": "Online",
+        "status": "InProgress"
+    },
+    {
+        "id": 5,
+        "title": "Hacer aseo de la casa",
+        "place": "Home",
+        "status": "Todo"
+    }
+]
