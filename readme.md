@@ -23,7 +23,7 @@ _Si lo que deseas es tener una copia en tu computador local, debes bajarte el ar
 
 _Para ejecutar el servidor deberás escribir el siguiente comando en tu consola:_
 
-node src/index.js
+**node src/index.js**
 
 ## Construido con 🛠️
 
