@@ -1,3 +1,4 @@
+// Libraries
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -5,6 +6,7 @@ const app = express();
 // Settings
 app.set('port', process.env.PORT || 4000);
 app.set('json spaces', 2);
+// Settings for let access the localhost:3000 front-end app (using cors middleware)
 const config = {
   application: {
       cors: {

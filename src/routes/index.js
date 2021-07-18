@@ -1,11 +1,25 @@
 const { Router } = require('express');
 const router = Router();
+// The data in a JSON File
 const todos = require('../data.json');
 
+// GET all TODO's in the database
+// GET localhost:400/api/todos
 router.get('/', (req, res) => {
     res.json(todos);
 });
 
+// GET only one TODO
+// for example: GET localhost:4000/api/todos/1
+// If the TODO required is not found, this returns an empty array
+router.get('/:id', (req, res) => {
+    var newTodos = todos.filter(todo => todo.id === parseInt(req.params.id));
+    res.json(newTodos);
+});
+
+// POST a new TODO
+// POST localhost:4000/api/todos
+// Sending an object with the format {title, place, status} is required
 router.post('/', (req, res) => {
     const { title, place, status } = req.body;
     if (title && place && status) {
@@ -20,6 +34,8 @@ router.post('/', (req, res) => {
     }
 });
 
+// DELETE an specific TODO
+// for example: DELETE localhost:4000/api/todos/1
 router.delete('/:id', (req, res) => {
     let indexToDelete;
     todos.forEach((todo, index) => {
@@ -37,7 +53,9 @@ router.delete('/:id', (req, res) => {
     }
 });
 
-// Update an item
+// UPDATE an specific TODO
+// for example: UPDATE localhost:4000/api/todos/1
+// Sending an object with the format {title, place, status} is required
 router.put('/:id', (req, res) => {
     const { title, place, status } = req.body;
     let indexToUpdate;
